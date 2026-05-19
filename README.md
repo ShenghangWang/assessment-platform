@@ -15,6 +15,7 @@ Open `http://127.0.0.1:8000/p/dating_readiness/`
 
 # Project Structure
 
+'''
 assessment_platform/
 ├─ manage.py
 ├─ requirements.txt
@@ -66,5 +67,5 @@ assessment_platform/
    ├─ test_scoring.py
    ├─ test_band_mapping.py
    └─ test_endpoints.py
-
+'''
 
