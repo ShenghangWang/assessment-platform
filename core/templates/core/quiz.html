@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ pack.title }} - 测试{% endblock %}
+{% block content %}
+<section class='card'>
+  <h1>{{ pack.title }}</h1>
+  <p class='muted'>请按你的真实情况作答。</p>
+  <form method='post' action='{% url "core:submit" pack.slug %}'>
+    {% csrf_token %}
+    {% for field in form %}
+      <div class='question'>
+        <div class='question-title'>{{ field.label }}</div>
+        <div class='options'>{{ field }}</div>
+      </div>
+    {% endfor %}
+    <button class='btn' type='submit'>查看结果</button>
+  </form>
+</section>
+{% endblock %}

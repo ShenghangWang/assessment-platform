@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ pack.title }}{% endblock %}
+{% block content %}
+<section class='card'>
+  <div class='pill'>心理与行为评估</div>
+  <h1>{{ pack.title }}</h1>
+  <p class='subtitle'>{{ pack.subtitle }}</p>
+  <p class='muted'>{{ pack.description|default:'回答 16 个问题，获得你的评估结果和个性化建议。' }}</p>
+  <a class='btn' href='{% url "core:quiz" pack.slug %}'>开始测试</a>
+</section>
+{% endblock %}

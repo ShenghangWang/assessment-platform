@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+{% block title %}解锁建议 - {{ pack.title }}{% endblock %}
+{% block content %}
+<section class='card'>
+  <div class='pill'>付费解锁</div>
+  <h1>个性化提升建议</h1>
+  <p>你将获得更详细的提升方向、7 天行动计划和针对低分维度的建议。</p>
+  <ul><li>优先改进点</li><li>简洁可执行的建议</li><li>7 天行动计划</li></ul>
+  <a class='btn' href='{% url "core:unlock" attempt.id %}'>立即解锁</a>
+</section>
+{% endblock %}

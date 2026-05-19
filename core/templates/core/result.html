@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}结果 - {{ pack.title }}{% endblock %}
+{% block content %}
+<section class='card'>
+  <div class='pill'>{{ band.label }}</div>
+  <h1>{{ band.copy.headline }}</h1>
+  <p class='score'>得分：{{ attempt.display_score }}/100</p>
+  <p>{{ band.copy.summary }}</p>
+  <ul>{% for reason in band.copy.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
+  <p class='warning'>{{ band.copy.warning_text }}</p>
+  <a class='btn' href='{% url "core:paywall" attempt.id %}'>{{ band.copy.cta_text }}</a>
+</section>
+{% endblock %}

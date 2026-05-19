@@ -1,0 +1,355 @@
+{
+  "slug": "dating_readiness",
+  "title": "今年会脱单吗",
+  "subtitle": "回答 16 个问题，获得你的脱单概率评估与个性化提升建议。",
+  "description": "一个可复用的心理与行为评估模板，当前展示的是 dating pack。",
+  "version": 1,
+  "locale": "zh-CN",
+  "answer_scale": {
+    "type": "likert_1_5",
+    "min": 1,
+    "max": 5,
+    "labels": {
+      "1": "非常不符合",
+      "2": "不太符合",
+      "3": "一般",
+      "4": "比较符合",
+      "5": "非常符合"
+    }
+  },
+  "dimensions": [
+    {
+      "slug": "opportunity",
+      "name": "机会",
+      "description": "接触潜在对象的机会"
+    },
+    {
+      "slug": "motivation",
+      "name": "动机",
+      "description": "关系意愿和主动性"
+    },
+    {
+      "slug": "anxiety",
+      "name": "焦虑/回避",
+      "description": "对拒绝和亲密的负面反应"
+    },
+    {
+      "slug": "actionability",
+      "name": "行动力",
+      "description": "执行建议的意愿"
+    },
+    {
+      "slug": "personality",
+      "name": "社交方式",
+      "description": "外向性和主动性"
+    },
+    {
+      "slug": "financial_stability",
+      "name": "经济稳定性",
+      "description": "财务压力与可支配社交资源"
+    }
+  ],
+  "dimension_weights": {
+    "opportunity": 0.2,
+    "motivation": 0.2,
+    "anxiety": 0.15,
+    "actionability": 0.15,
+    "personality": 0.1,
+    "financial_stability": 0.2
+  },
+  "questions": [
+    {
+      "key": "q1",
+      "text": "你每周通常有多少次机会认识新的人？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "opportunity",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q2",
+      "text": "你是否会主动和自己感兴趣的人开启聊天或寒暄？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "motivation",
+          "weight": 0.7
+        },
+        {
+          "slug": "personality",
+          "weight": 0.3
+        }
+      ]
+    },
+    {
+      "key": "q3",
+      "text": "你现在是否明确想在未来 12 个月内开始一段恋爱？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "motivation",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q4",
+      "text": "你觉得在你目前生活阶段，恋爱有多重要？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "motivation",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q5",
+      "text": "你会不会因为长期单身而焦虑？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": true,
+      "dimensions": [
+        {
+          "slug": "anxiety",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q6",
+      "text": "你对自己真正想要的伴侣条件是否清晰？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "motivation",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q7",
+      "text": "你是否会主动使用交友软件或朋友介绍来扩大认识新人的机会？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "opportunity",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q8",
+      "text": "你每周是否有足够时间用于社交和约会？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "opportunity",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q9",
+      "text": "你的工作/学习压力是否明显挤占了社交时间？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": true,
+      "dimensions": [
+        {
+          "slug": "opportunity",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q10",
+      "text": "你是否愿意在接下来 3 个月刻意调整一些习惯来提升脱单机会？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "actionability",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q11",
+      "text": "你在喜欢的人面前是否容易紧张或害怕被拒绝？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": true,
+      "dimensions": [
+        {
+          "slug": "anxiety",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q12",
+      "text": "你是否倾向于在关系刚开始时就保持距离，避免太快投入？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": true,
+      "dimensions": [
+        {
+          "slug": "anxiety",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q13",
+      "text": "你通常是否比较主动、外向、容易认识新朋友？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "personality",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q14",
+      "text": "你是否拥有较稳定、积极的社交圈？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "opportunity",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q15",
+      "text": "你是否愿意接受恋爱方面的建议并付诸行动？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "actionability",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "key": "q16",
+      "text": "你目前的经济状况是否比较稳定？",
+      "answer_type": "likert_1_5",
+      "reverse_scored": false,
+      "dimensions": [
+        {
+          "slug": "financial_stability",
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "bands": [
+    {
+      "band_key": "high",
+      "label": "高概率脱单",
+      "min_score": 4.2,
+      "max_score": 5.0,
+      "display_order": 1,
+      "copy": {
+        "headline": "你的脱单机会很高",
+        "summary": "你的社交机会、主动性或行动力都比较强。",
+        "reasons": [
+          "你有较好的社交暴露",
+          "你对关系的意愿清晰",
+          "你愿意执行改善建议"
+        ],
+        "warning_text": "这只是基于自我报告的概率评估，不是确定性预测。",
+        "cta_text": "解锁你的个性化提升方案"
+      }
+    },
+    {
+      "band_key": "medium",
+      "label": "中等概率",
+      "min_score": 3.4,
+      "max_score": 4.199,
+      "display_order": 2,
+      "copy": {
+        "headline": "你的脱单机会中等",
+        "summary": "你有一些优势，但还有几个关键点值得优化。",
+        "reasons": [
+          "你已有一定行动力",
+          "部分维度表现不错",
+          "仍有可优化空间"
+        ],
+        "warning_text": "这是一个成长型评估，不是命运判断。",
+        "cta_text": "解锁你的提升建议"
+      }
+    },
+    {
+      "band_key": "low",
+      "label": "偏低概率",
+      "min_score": 2.6,
+      "max_score": 3.399,
+      "display_order": 3,
+      "copy": {
+        "headline": "你的脱单机会偏低",
+        "summary": "当前更需要先解决机会、行动或心理阻力。",
+        "reasons": [
+          "社交机会可能不足",
+          "执行力还有提升空间",
+          "心理阻力可能偏高"
+        ],
+        "warning_text": "这不是否定你，而是帮助你找到最值得改的地方。",
+        "cta_text": "查看针对性改善方案"
+      }
+    },
+    {
+      "band_key": "self_improvement",
+      "label": "当前更适合自我提升",
+      "min_score": 1.0,
+      "max_score": 2.599,
+      "display_order": 4,
+      "copy": {
+        "headline": "当前更适合先做自我提升",
+        "summary": "先把社交、心态或生活结构调整好，会更有利于后续关系发展。",
+        "reasons": [
+          "某些关键维度需要先补强",
+          "当前状态不适合急于推进关系",
+          "优化后效果会更好"
+        ],
+        "warning_text": "这只是阶段建议，不代表你以后不会有更好的关系机会。",
+        "cta_text": "查看你的提升起点"
+      }
+    }
+  ],
+  "recommendation_templates": [
+    {
+      "template_key": "improvement_plan",
+      "title": "个性化提升建议",
+      "is_paid": true,
+      "prompt_template": "基于以下评分生成简洁、具体、可执行的建议。重点关注低分维度：{{low_dimensions}}。领域：{{domain}}。结果分档：{{band}}。",
+      "output_schema": {
+        "summary": "string",
+        "top_issues": [
+          "string"
+        ],
+        "tips": [
+          {
+            "title": "string",
+            "details": "string"
+          }
+        ],
+        "7_day_plan": [
+          "string"
+        ]
+      }
+    }
+  ]
+}

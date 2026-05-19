@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% block title %}报告 - {{ pack.title }}{% endblock %}
+{% block content %}
+<section class='card'>
+  <div class='pill'>你的报告</div>
+  <h1>{% if report %}{{ report.title }}{% else %}个性化报告{% endif %}</h1>
+  <p>{% if report %}{{ report.summary }}{% else %}这里放生成结果。{% endif %}</p>
+  {% if report %}<pre class='json'>{{ report.content_json|safe }}</pre>{% else %}<pre class='json'>{"summary":"..."}</pre>{% endif %}
+</section>
+{% endblock %}
