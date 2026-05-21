@@ -1,8 +1,8 @@
 {
   "slug": "dating_readiness",
   "title": "今年会脱单吗",
-  "subtitle": "回答 16 个问题，获得你的脱单概率评估与个性化提升建议。",
-  "description": "一个可复用的心理与行为评估模板，当前展示的是 dating pack。",
+  "subtitle": "回答 15 个问题，获得你的脱单概率评估与个性化提升建议。",
+  "description": "一个可复用的心理与行为评估模板，当前展示的是 dating pack。结果基于自我报告问题生成，只代表当前状态下的脱单机会评估，不是确定性预测，也不构成心理诊断或人生建议。",
   "version": 1,
   "locale": "zh-CN",
   "answer_scale": {
@@ -31,7 +31,7 @@
     {
       "slug": "anxiety",
       "name": "焦虑/回避",
-      "description": "对拒绝和亲密的负面反应"
+      "description": "对拒绝、长期单身和亲密关系的负面反应"
     },
     {
       "slug": "actionability",
@@ -68,6 +68,18 @@
           "slug": "opportunity",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "How Couples Meet and Stay Together Dataset",
+          "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/38873",
+          "note": "支持“认识新人机会、朋友/社交圈、线下线上接触渠道”与关系形成有关。"
+        },
+        {
+          "title": "Why people are single: The Big Five as predictors of involuntary singlehood",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0191886921007546",
+          "note": "低外向性与更高的非自愿单身概率和更长单身时长相关。"
+        }
       ]
     },
     {
@@ -84,6 +96,18 @@
           "slug": "personality",
           "weight": 0.3
         }
+      ],
+      "research_links": [
+        {
+          "title": "Strategic Behaviors in Romantic Relationship Initiation",
+          "url": "https://journals.sagepub.com/doi/10.1177/0146167299025006006",
+          "note": "支持直接、主动的关系开启策略属于关系发展早期的重要行为。"
+        },
+        {
+          "title": "Commitment Readiness and Relationship Formation",
+          "url": "https://journals.sagepub.com/doi/10.1177/0146167218764668",
+          "note": "关系准备度与主动追求关系开启有关。"
+        }
       ]
     },
     {
@@ -96,17 +120,12 @@
           "slug": "motivation",
           "weight": 1.0
         }
-      ]
-    },
-    {
-      "key": "q4",
-      "text": "你觉得在你目前生活阶段，恋爱有多重要？",
-      "answer_type": "likert_1_5",
-      "reverse_scored": false,
-      "dimensions": [
+      ],
+      "research_links": [
         {
-          "slug": "motivation",
-          "weight": 1.0
+          "title": "Commitment Readiness and Relationship Formation",
+          "url": "https://journals.sagepub.com/doi/10.1177/0146167218764668",
+          "note": "支持关系准备度、关系意愿与未来进入关系的可能性有关。"
         }
       ]
     },
@@ -120,6 +139,18 @@
           "slug": "anxiety",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "Settling for Less Out of Fear of Being Single",
+          "url": "https://www.ovid.com/journals/jpspy/abstract/10.1037/a0034628~settling-for-less-out-of-fear-of-being-single",
+          "note": "支持“害怕单身”会影响择偶和关系选择。"
+        },
+        {
+          "title": "PubMed correction record for Spielmann et al. 2013",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30321050/",
+          "note": "该页面包含原研究摘要，并说明 fear of being single 与 settling for less 的关系。"
+        }
       ]
     },
     {
@@ -131,6 +162,18 @@
         {
           "slug": "motivation",
           "weight": 1.0
+        }
+      ],
+      "research_links": [
+        {
+          "title": "Why people face difficulties in attracting mates",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0191886923003458",
+          "note": "研究了择偶困难、flirting capacity、choosiness、mating effort 等与非自愿单身相关的因素。"
+        },
+        {
+          "title": "Commitment Readiness and Relationship Formation",
+          "url": "https://journals.sagepub.com/doi/10.1177/0146167218764668",
+          "note": "支持关系意愿和关系准备度与关系形成有关。"
         }
       ]
     },
@@ -144,6 +187,18 @@
           "slug": "opportunity",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "Tinder Use and Romantic Relationship Formations",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.01757/full",
+          "note": "大型纵向研究，考察交友软件使用与之后关系形成的关系。"
+        },
+        {
+          "title": "How Couples Meet and Stay Together Dataset",
+          "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/38873",
+          "note": "支持线上、朋友介绍等不同认识渠道与关系形成有关。"
+        }
       ]
     },
     {
@@ -155,6 +210,18 @@
         {
           "slug": "opportunity",
           "weight": 1.0
+        }
+      ],
+      "research_links": [
+        {
+          "title": "How Couples Meet and Stay Together Dataset",
+          "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/38873",
+          "note": "支持现实接触场景、社交渠道和关系形成有关；时间是接触机会的现实约束。"
+        },
+        {
+          "title": "Why people are single: The Big Five as predictors of involuntary singlehood",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0191886921007546",
+          "note": "外向性与更丰富社交生活、更多潜在伴侣接触机会相关。"
         }
       ]
     },
@@ -168,6 +235,13 @@
           "slug": "opportunity",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "How Couples Meet and Stay Together Dataset",
+          "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/38873",
+          "note": "该题是基于社交暴露研究的产品推断：压力挤占时间，会减少认识潜在对象的现实机会。"
+        }
       ]
     },
     {
@@ -179,6 +253,13 @@
         {
           "slug": "actionability",
           "weight": 1.0
+        }
+      ],
+      "research_links": [
+        {
+          "title": "Commitment Readiness and Relationship Formation",
+          "url": "https://journals.sagepub.com/doi/10.1177/0146167218764668",
+          "note": "关系准备度与主动追求关系开启有关，因此改变习惯的意愿可作为行动力信号。"
         }
       ]
     },
@@ -192,6 +273,13 @@
           "slug": "anxiety",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "Attachment Anxiety Compromises Relational Opportunities",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24377360/",
+          "note": "支持依恋焦虑、紧张、退缩等会影响早期关系机会。"
+        }
       ]
     },
     {
@@ -203,6 +291,13 @@
         {
           "slug": "anxiety",
           "weight": 1.0
+        }
+      ],
+      "research_links": [
+        {
+          "title": "Attachment Anxiety Compromises Relational Opportunities",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24377360/",
+          "note": "该题对应依恋/亲密关系中的回避和距离感；研究支持依恋相关因素会影响关系机会。"
         }
       ]
     },
@@ -216,6 +311,13 @@
           "slug": "personality",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "Why people are single: The Big Five as predictors of involuntary singlehood",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0191886921007546",
+          "note": "低外向性与更高的非自愿单身概率和更长单身时长相关。"
+        }
       ]
     },
     {
@@ -227,6 +329,13 @@
         {
           "slug": "opportunity",
           "weight": 1.0
+        }
+      ],
+      "research_links": [
+        {
+          "title": "How Couples Meet and Stay Together Dataset",
+          "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/38873",
+          "note": "支持朋友、社交圈、家庭、社区等社会关系网络与伴侣认识方式有关。"
         }
       ]
     },
@@ -240,6 +349,13 @@
           "slug": "actionability",
           "weight": 1.0
         }
+      ],
+      "research_links": [
+        {
+          "title": "Commitment Readiness and Relationship Formation",
+          "url": "https://journals.sagepub.com/doi/10.1177/0146167218764668",
+          "note": "关系准备度与关系兴趣、主动追求和之后关系形成有关；该题用于衡量付诸行动的意愿。"
+        }
       ]
     },
     {
@@ -251,6 +367,13 @@
         {
           "slug": "financial_stability",
           "weight": 1.0
+        }
+      ],
+      "research_links": [
+        {
+          "title": "The economics of marriage: Evidence from China",
+          "url": "https://www.nature.com/articles/s41599-022-01400-4",
+          "note": "中国婚恋市场中，住房价格等婚姻成本上升与结婚率下降有关；支持经济压力是重要背景因素。"
         }
       ]
     }
@@ -264,11 +387,11 @@
       "display_order": 1,
       "copy": {
         "headline": "你的脱单机会很高",
-        "summary": "你的社交机会、主动性或行动力都比较强。",
+        "summary": "你的社交机会、关系意愿、行动力或现实条件整体较强。",
         "reasons": [
-          "你有较好的社交暴露",
-          "你对关系的意愿清晰",
-          "你愿意执行改善建议"
+          "你有较好的社交暴露或认识新人的机会",
+          "你对关系的意愿比较清晰",
+          "你具备较好的行动意愿或现实支持条件"
         ],
         "warning_text": "这只是基于自我报告的概率评估，不是确定性预测。",
         "cta_text": "解锁你的个性化提升方案"
@@ -282,11 +405,11 @@
       "display_order": 2,
       "copy": {
         "headline": "你的脱单机会中等",
-        "summary": "你有一些优势，但还有几个关键点值得优化。",
+        "summary": "你有一些优势，但仍有几个关键点值得优化。",
         "reasons": [
-          "你已有一定行动力",
-          "部分维度表现不错",
-          "仍有可优化空间"
+          "你已有一定关系意愿或行动力",
+          "部分维度表现不错，但不够稳定",
+          "提升社交机会、心态或现实条件后，结果可能更好"
         ],
         "warning_text": "这是一个成长型评估，不是命运判断。",
         "cta_text": "解锁你的提升建议"
@@ -300,13 +423,13 @@
       "display_order": 3,
       "copy": {
         "headline": "你的脱单机会偏低",
-        "summary": "当前更需要先解决机会、行动或心理阻力。",
+        "summary": "当前更需要先解决机会、行动、心理阻力或现实压力中的关键短板。",
         "reasons": [
           "社交机会可能不足",
-          "执行力还有提升空间",
-          "心理阻力可能偏高"
+          "执行力或主动性还有提升空间",
+          "焦虑、回避或现实压力可能影响关系推进"
         ],
-        "warning_text": "这不是否定你，而是帮助你找到最值得改的地方。",
+        "warning_text": "这不是否定你，而是帮助你找到最值得优先改善的地方。",
         "cta_text": "查看针对性改善方案"
       }
     },
@@ -318,11 +441,11 @@
       "display_order": 4,
       "copy": {
         "headline": "当前更适合先做自我提升",
-        "summary": "先把社交、心态或生活结构调整好，会更有利于后续关系发展。",
+        "summary": "先把社交、心态、行动习惯或现实压力调整好，会更有利于后续关系发展。",
         "reasons": [
           "某些关键维度需要先补强",
           "当前状态不适合急于推进关系",
-          "优化后效果会更好"
+          "优化生活结构和行动方式后，机会可能明显改善"
         ],
         "warning_text": "这只是阶段建议，不代表你以后不会有更好的关系机会。",
         "cta_text": "查看你的提升起点"
@@ -334,7 +457,7 @@
       "template_key": "improvement_plan",
       "title": "个性化提升建议",
       "is_paid": true,
-      "prompt_template": "基于以下评分生成简洁、具体、可执行的建议。重点关注低分维度：{{low_dimensions}}。领域：{{domain}}。结果分档：{{band}}。",
+      "prompt_template": "基于以下评分生成简洁、具体、可执行的建议。重点关注低分维度：{{low_dimensions}}。领域：{{domain}}。结果分档：{{band}}。请避免羞辱用户，避免确定性预测，强调可执行的小步骤。",
       "output_schema": {
         "summary": "string",
         "top_issues": [

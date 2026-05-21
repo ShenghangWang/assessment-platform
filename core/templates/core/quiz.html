@@ -1,18 +1,44 @@
 {% extends 'core/base.html' %}
 {% block title %}{{ pack.title }} - 测试{% endblock %}
+
 {% block content %}
-<section class='card'>
   <h1>{{ pack.title }}</h1>
-  <p class='muted'>请按你的真实情况作答。</p>
-  <form method='post' action='{% url "core:submit" pack.slug %}'>
+  <p>{{ pack.subtitle }}</p>
+
+  <form method="post" action="{% url 'core:submit' pack.slug %}">
     {% csrf_token %}
-    {% for field in form %}
-      <div class='question'>
-        <div class='question-title'>{{ field.label }}</div>
-        <div class='options'>{{ field }}</div>
-      </div>
+
+    {% for q in pack.questions %}
+      <section class="question-card">
+        <h3>{{ forloop.counter }}. {{ q.text }}</h3>
+
+        <div class="choices">
+          {% for value, label in pack.answer_scale.labels.items %}
+            <label class="choice">
+              <input type="radio" name="{{ q.key }}" value="{{ value }}" required>
+              {{ value }} {{ label }}
+            </label>
+          {% endfor %}
+        </div>
+
+        {% if q.research_links %}
+          <details class="research-links">
+            <summary>研究依据</summary>
+            <ul>
+              {% for link in q.research_links %}
+                <li>
+                  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                    {{ link.title }}
+                  </a>
+                  <span class="source-note">— {{ link.note }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% endif %}
+      </section>
     {% endfor %}
-    <button class='btn' type='submit'>查看结果</button>
+
+    <button class="btn" type="submit">查看结果</button>
   </form>
-</section>
 {% endblock %}
