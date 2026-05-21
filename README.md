@@ -13,13 +13,17 @@ python manage.py runserver
 
 Open `http://127.0.0.1:8000/p/dating_readiness/`
 
+
+
 # Project Structure
 
-'''
+```text
 assessment_platform/
 ├─ manage.py
 ├─ requirements.txt
 ├─ .env.example
+├─ README.md
+├─ db.sqlite3                  # local only 
 ├─ config/
 │  ├─ __init__.py
 │  ├─ settings.py
@@ -40,6 +44,14 @@ assessment_platform/
 │  ├─ ai_client.py
 │  ├─ payment.py
 │  ├─ utils.py
+│  ├─ management/
+│  │  ├─ __init__.py
+│  │  └─ commands/
+│  │     ├─ __init__.py
+│  │     └─ import_pack.py
+│  ├─ migrations/
+│  │  ├─ __init__.py
+│  │  └─ 0001_initial.py
 │  ├─ templates/
 │  │  └─ core/
 │  │     ├─ base.html
@@ -50,8 +62,10 @@ assessment_platform/
 │  │     └─ report.html
 │  └─ static/
 │     └─ core/
-│        ├─ css/styles.css
-│        └─ js/app.js
+│        ├─ css/
+│        │  └─ styles.css
+│        └─ js/
+│           └─ app.js
 ├─ packs/
 │  ├─ dating_readiness/
 │  │  ├─ pack.json
@@ -67,5 +81,17 @@ assessment_platform/
    ├─ test_scoring.py
    ├─ test_band_mapping.py
    └─ test_endpoints.py
-'''
+```
 
+> Note: `db.sqlite3`, `.env`, `.venv/`, `__pycache__/`, and `staticfiles/` are local development files and should usually be excluded from GitHub with `.gitignore`.
+
+
+
+## Import an assessment pack
+
+This project uses JSON-based assessment packs. Before users can submit quiz attempts, the pack must be imported into the database.
+
+For the dating-readiness pack, run:
+
+```bash
+python manage.py import_pack dating_readiness --publish --update
