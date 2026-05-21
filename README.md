@@ -8,10 +8,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 python manage.py migrate
-python manage.py runserver
 ```
-
-Open `http://127.0.0.1:8000/p/dating_readiness/`
 
 
 
@@ -95,3 +92,7 @@ For the dating-readiness pack, run:
 
 ```bash
 python manage.py import_pack dating_readiness --publish --update
+python manage.py runserver
+```
+
+Open `http://127.0.0.1:8000/p/dating_readiness/`
