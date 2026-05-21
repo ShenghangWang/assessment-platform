@@ -1,11 +1,18 @@
 {% extends 'core/base.html' %}
 {% block title %}解锁建议 - {{ pack.title }}{% endblock %}
+
 {% block content %}
-<section class='card'>
-  <div class='pill'>付费解锁</div>
-  <h1>个性化提升建议</h1>
-  <p>你将获得更详细的提升方向、7 天行动计划和针对低分维度的建议。</p>
-  <ul><li>优先改进点</li><li>简洁可执行的建议</li><li>7 天行动计划</li></ul>
-  <a class='btn' href='{% url "core:unlock" attempt.id %}'>立即解锁</a>
-</section>
+  <h1>解锁个性化建议</h1>
+  <p>你将获得更详细的提升方向、7天行动计划、30天计划、聊天开场白和低成本约会建议。</p>
+
+  <ul>
+    <li>你的主要短板分析</li>
+    <li>针对低分维度的具体建议</li>
+    <li>7天行动计划</li>
+    <li>30天提升路径</li>
+    <li>适合普通人的聊天开场白</li>
+    <li>低成本约会建议</li>
+  </ul>
+
+  <a class="btn" href="{% url 'core:mock_pay' attempt.id %}">模拟支付并解锁</a>
 {% endblock %}

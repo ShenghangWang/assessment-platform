@@ -1,10 +1,61 @@
 {% extends 'core/base.html' %}
 {% block title %}报告 - {{ pack.title }}{% endblock %}
+
 {% block content %}
-<section class='card'>
-  <div class='pill'>你的报告</div>
-  <h1>{% if report %}{{ report.title }}{% else %}个性化报告{% endif %}</h1>
-  <p>{% if report %}{{ report.summary }}{% else %}这里放生成结果。{% endif %}</p>
-  {% if report %}<pre class='json'>{{ report.content_json|safe }}</pre>{% else %}<pre class='json'>{"summary":"..."}</pre>{% endif %}
-</section>
+  <section class="report">
+    <h1>{{ report.title }}</h1>
+    <p class="summary">{{ content.summary }}</p>
+
+    <h2>你的主要改善方向</h2>
+    <ul>
+      {% for item in content.top_issues %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>你的优势</h2>
+    <ul>
+      {% for item in content.strengths %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>个性化建议</h2>
+    {% for tip in content.tips %}
+      <div class="tip-card">
+        <h3>{{ tip.title }}</h3>
+        <p>{{ tip.details }}</p>
+      </div>
+    {% endfor %}
+
+    <h2>7天行动计划</h2>
+    <ol>
+      {% for step in content.seven_day_plan %}
+        <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+
+    <h2>30天提升路径</h2>
+    <ol>
+      {% for step in content.thirty_day_plan %}
+        <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+
+    <h2>聊天开场白</h2>
+    <ul>
+      {% for item in content.conversation_starters %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>低成本约会建议</h2>
+    <ul>
+      {% for item in content.low_cost_date_ideas %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <p class="disclaimer">{{ content.disclaimer }}</p>
+  </section>
 {% endblock %}

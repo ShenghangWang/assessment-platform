@@ -9,4 +9,6 @@ urlpatterns = [
     path('attempt/<int:attempt_id>/paywall/', views.paywall_view, name='paywall'),
     path('attempt/<int:attempt_id>/unlock/', views.unlock_view, name='unlock'),
     path('attempt/<int:attempt_id>/report/', views.report_view, name='report'),
+
+    path('attempt/<int:attempt_id>/mock-pay/', views.mock_pay_view, name='mock_pay'),
 ]
